@@ -1,0 +1,24 @@
+{
+    "name": "rcv/datagrid",
+    "description": "Opencart datagrid",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "RCV\\DataGrid\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RCV Technologies"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {
+        "giggsey/locale": "^1.7|^2.0",
+        "php": ">=7.4.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    }
+}
