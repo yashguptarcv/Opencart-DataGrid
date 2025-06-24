@@ -5,7 +5,7 @@ use RCV\DataGrid\Exceptions\InvalidDataGridException;
 
 if (!function_exists('fn_datagrid')) {
 
-    function fn_datagrid(string $datagridClass): DataGrid 
+    function fn_datagrid(string $datagridClass, \Opencart\System\Engine\Registry $registry = null): DataGrid 
     {
         if (!class_exists($datagridClass)) {
             throw new InvalidDataGridException("Class '{$datagridClass}' does not exist.");
@@ -15,6 +15,6 @@ if (!function_exists('fn_datagrid')) {
             throw new InvalidDataGridException("'{$datagridClass}' must extend '" . DataGrid::class . "'.");
         }
         
-        return new $datagridClass(); // Directly instantiate the class
+        return new $datagridClass($registry); // Directly instantiate the class
     }
 }
